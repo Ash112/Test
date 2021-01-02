@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>taskq</title>
+
+
+
+    <div id = "userinput">
+        <form action="{{ url_for("userinput")}}" method="post">
+
+        <div  id = "inputtab">
+
+        <label for="subname">Subreddit:</label>
+        <input type="text" id="subname" name="sname" placeholder="News,Funny,Askreddit...etc">
+
+        <button  type="submit" id="submitbutton">Submit</button>
+
+    </div>
+
+</form>
+
+<input type="text"  id="word_frequency" value="{{ output }}">
+
+</head>
+<body>
+</body>
+</html>
