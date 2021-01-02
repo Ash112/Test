@@ -5,14 +5,14 @@ import time
 
 
 app = Flask(__name__)
-app.config['CELERY_BROKER_URL'] = 'amqp://jeduevbw:GVkBafRrF9Gqp3MSXAafw0gUzFZs_N5U@lionfish.rmq.cloudamqp.com/jeduevbw'
+app.config['CELERY_BROKER_URL'] = 'amqp://'
 app.config['CELERY_RESULT_BACKEND'] = 'rpc://'
 
 celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'],backend=app.config['CELERY_RESULT_BACKEND'])
 #celery.conf.update(app.config)
 
 celery.conf.update(
-broker_url='amqp://jeduevbw:GVkBafRrF9Gqp3MSXAafw0gUzFZs_N5U@lionfish.rmq.cloudamqp.com/jeduevbw',
+broker_url='amqp://',
 result_backend='rpc://',result_persistent = False
 )
 
